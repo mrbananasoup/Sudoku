@@ -15,31 +15,14 @@ public class Game extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.home);
 
-        //SudokuBoard easyGameg = new EasyGame();
         final SudokuBoard mediumGame = new MediumGame();
-        //SudokuBoard hardGame = new HardGame();
-
-        //easyGameg.createSudoku();
         mediumGame.createSudoku();
-        //hardGame.createSudoku();
-
-        //easyGameg.makeHoles();
         mediumGame.makeHoles();
-        //hardGame.makeHoles();
-
-        //easyGameg.printSolution();
-
-        //easyGameg.printGame();
         mediumGame.printGame();
-        //hardGame.printGame();
 
         mediumGame.calculateSmall();
 
         System.out.println(Arrays.toString(mediumGame.gameBoard[0][0].getSmallNumbers()));
-
-
-
-
 
         final Button button = findViewById(R.id.btnStart);
         button.setOnClickListener(new View.OnClickListener() {
