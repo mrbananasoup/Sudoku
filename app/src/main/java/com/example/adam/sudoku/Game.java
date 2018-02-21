@@ -22,6 +22,8 @@ public class Game extends AppCompatActivity {
         //new
         mediumGame.calculateSmall();
 
+        System.out.print("Git Hub Test");
+
         System.out.println(Arrays.toString(mediumGame.gameBoard[0][0].getSmallNumbers()));
 
         final Button button = findViewById(R.id.btnStart);
