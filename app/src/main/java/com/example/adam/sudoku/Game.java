@@ -24,6 +24,8 @@ public class Game extends AppCompatActivity {
 
         System.out.println(Arrays.toString(mediumGame.gameBoard[0][0].getSmallNumbers()));
 
+        System.out.print("From con");
+
         final Button button = findViewById(R.id.btnStart);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
