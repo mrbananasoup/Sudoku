@@ -22,6 +22,8 @@ public class Game extends AppCompatActivity {
         //new
         mediumGame.calculateSmall();
 
+        System.out.println("This is my last te for this time");
+
         System.out.println(Arrays.toString(mediumGame.gameBoard[0][0].getSmallNumbers()));
 
         final Button button = findViewById(R.id.btnStart);
