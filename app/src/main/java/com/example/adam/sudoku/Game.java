@@ -19,7 +19,7 @@ public class Game extends AppCompatActivity {
         mediumGame.createSudoku();
         mediumGame.makeHoles();
         mediumGame.printGame();
-
+        //new
         mediumGame.calculateSmall();
 
         System.out.println(Arrays.toString(mediumGame.gameBoard[0][0].getSmallNumbers()));
