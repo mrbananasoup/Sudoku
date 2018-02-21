@@ -43,9 +43,6 @@ public class Game extends AppCompatActivity {
         {
             for(int j = 0; j < 9; j++)
             {
-                String textID = "Cell" + i + "-" + j;
-                int resID = getResources().getIdentifier(textID, "id", getPackageName());
-                cells[i][j] = ((TextView)findViewById(resID));
                 cells[i][j].setText("" + mediumGame.solutionBoard[i][j].getNumber());
             }
         }
