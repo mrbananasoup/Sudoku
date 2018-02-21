@@ -37,15 +37,9 @@ public class Game extends AppCompatActivity {
         }
     }
 
-    private void refreshCells()
+    private void refreshCells(int x, int y)
     {
-        for(int i = 0; i < 9; i++)
-        {
-            for(int j = 0; j < 9; j++)
-            {
-                cells[i][j].setText("" + mediumGame.solutionBoard[i][j].getNumber());
-            }
-        }
+        cells[x][y].setText("" + mediumGame.solutionBoard[x][y].getNumber());
     }
 
     public void btnCell(View view)
@@ -53,7 +47,7 @@ public class Game extends AppCompatActivity {
         String id = view.getResources().getResourceName(view.getId());
         id = id.substring(id.length() - 3, id.length());
         mediumGame.solutionBoard[Integer.parseInt(id.substring(0,1))][Integer.parseInt(id.substring(2,3))].setNumber(0); // TODO test for cell on click remove later
-        refreshCells();
+        refreshCells(Integer.parseInt(id.substring(0,1)),Integer.parseInt(id.substring(2,3)));
     }
 
     @Override
