@@ -4,46 +4,43 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.TextView;
 
 import java.util.Arrays;
 
 public class Game extends AppCompatActivity {
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.home);
+    final SudokuBoard mediumGame = new MediumGame();
 
-        final SudokuBoard mediumGame = new MediumGame();
+    public void startGame(View view)
+    {
         mediumGame.createSudoku();
         mediumGame.makeHoles();
         mediumGame.printGame();
         mediumGame.calculateSmall();
 
+        // Just for Test TODO remove later
         System.out.println(Arrays.toString(mediumGame.gameBoard[0][0].getSmallNumbers()));
 
-        final Button button = findViewById(R.id.btnStart);
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
+        setContentView(R.layout.game);
+        TextView[][] cells = new TextView[9][9];
 
-                setContentView(R.layout.game);
-                TextView[][] cells = new TextView[9][9];
-
-                for(int i = 0; i < 9; i++)
-                {
-                    for(int j = 0; j < 9; j++)
-                    {
-                        String textID = "Cell" + i + "-" + j;
-                        int resID = getResources().getIdentifier(textID, "id", getPackageName());
-                        cells[i][j] = ((TextView)findViewById(resID));
-                        System.out.println();
-                        cells[i][j].setText("" + mediumGame.solutionBoard[i][j].getNumber());
-                    }
-                }
+        for(int i = 0; i < 9; i++)
+        {
+            for(int j = 0; j < 9; j++)
+            {
+                String textID = "Cell" + i + "-" + j;
+                int resID = getResources().getIdentifier(textID, "id", getPackageName());
+                cells[i][j] = ((TextView)findViewById(resID));
+                System.out.println();
+                cells[i][j].setText("" + mediumGame.solutionBoard[i][j].getNumber());
             }
-        });
+        }
+    }
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.home);
     }
 }
