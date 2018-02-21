@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Sudoku.iml" filepath="$PROJECT_DIR$/Sudoku.iml" />
+      <module fileurl="file://C:\Users\adamp\AndroidStudioProjects\Sudoku00\Sudoku.iml" filepath="C:\Users\adamp\AndroidStudioProjects\Sudoku00\Sudoku.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Sudoku00.iml" filepath="$PROJECT_DIR$/Sudoku00.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://C:\Users\adamp\AndroidStudioProjects\Sudoku00\app\app.iml" filepath="C:\Users\adamp\AndroidStudioProjects\Sudoku00\app\app.iml" />
     </modules>
   </component>
 </project>
