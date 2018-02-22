@@ -27,6 +27,9 @@ public class Game extends AppCompatActivity {
         mediumGame.printGame();
         mediumGame.calculateSmall();
 
+
+        //test
+
         // Just for Test TODO remove later
         System.out.println(Arrays.toString(mediumGame.gameBoard[0][0].getSmallNumbers()));
 
