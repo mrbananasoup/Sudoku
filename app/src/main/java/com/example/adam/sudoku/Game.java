@@ -19,15 +19,13 @@ public class Game extends AppCompatActivity {
     View currView = null;
     String currCell = "";
 
+    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     public void startGame(View view)
     {
         mediumGame.createSudoku();
         mediumGame.makeHoles();
         mediumGame.printGame();
         mediumGame.calculateSmall();
-
-
-        //test
 
         // Just for Test TODO remove later
         System.out.println(Arrays.toString(mediumGame.gameBoard[0][0].getSmallNumbers()));
@@ -42,6 +40,7 @@ public class Game extends AppCompatActivity {
                 int resID = getResources().getIdentifier(textID, "id", getPackageName());
                 cells[i][j] = ((TextView)findViewById(resID));
                 cells[i][j].setText("" + mediumGame.gameBoard[i][j].getNumber());
+                if(mediumGame.gameBoard[i][j].getNumber() != 0) cells[i][j].setBackgroundTintList(ColorStateList.valueOf(Color.GRAY));
             }
         }
     }
@@ -56,9 +55,12 @@ public class Game extends AppCompatActivity {
     {
         String id = view.getResources().getResourceName(view.getId());
         id = id.substring(id.length() - 3, id.length());
-        currCell = id;
-        setSelected(view);
-        refreshCells(Integer.parseInt(id.substring(0,1)),Integer.parseInt(id.substring(2,3)));
+        if(mediumGame.gameBoard[Integer.parseInt(id.substring(0,1))][Integer.parseInt(id.substring(2,3))].getIsEditable())
+        {
+            currCell = id;
+            setSelected(view);
+            //refreshCells(Integer.parseInt(id.substring(0,1)),Integer.parseInt(id.substring(2,3)));
+        }
     }
 
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
@@ -76,7 +78,6 @@ public class Game extends AppCompatActivity {
             view.setBackgroundTintList(ColorStateList.valueOf(Color.BLUE));
             currView = view;
         }
-
     }
 
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)

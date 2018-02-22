@@ -20,6 +20,7 @@ public class MediumGame extends SudokuBoard
                 if(Math.random() <= holeChance)
                 {
                     gameBoard[i][j].setNumber(0);
+                    gameBoard[i][j].setEditable(true);
                     remainingHoles--;
                 }
                 remainingSquares--;
