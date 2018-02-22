@@ -17,7 +17,6 @@ public class Game extends AppCompatActivity {
     final SudokuBoard mediumGame = new MediumGame();
     TextView[][] cells = new TextView[9][9];
     View currView = null;
-
     String currCell = "";
 
     public void startGame(View view)
@@ -42,14 +41,14 @@ public class Game extends AppCompatActivity {
                 String textID = "Cell" + i + "-" + j;
                 int resID = getResources().getIdentifier(textID, "id", getPackageName());
                 cells[i][j] = ((TextView)findViewById(resID));
-                cells[i][j].setText("" + mediumGame.solutionBoard[i][j].getNumber());
+                cells[i][j].setText("" + mediumGame.gameBoard[i][j].getNumber());
             }
         }
     }
 
     private void refreshCells(int x, int y)
     {
-        cells[x][y].setText("" + mediumGame.solutionBoard[x][y].getNumber());
+        cells[x][y].setText("" + mediumGame.gameBoard[x][y].getNumber());
     }
 
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
@@ -58,8 +57,6 @@ public class Game extends AppCompatActivity {
         String id = view.getResources().getResourceName(view.getId());
         id = id.substring(id.length() - 3, id.length());
         currCell = id;
-        mediumGame.solutionBoard[Integer.parseInt(id.substring(0,1))][Integer.parseInt(id.substring(2,3))].setNumber(0); // TODO test for cell on click remove later
-
         setSelected(view);
         refreshCells(Integer.parseInt(id.substring(0,1)),Integer.parseInt(id.substring(2,3)));
     }
@@ -80,6 +77,20 @@ public class Game extends AppCompatActivity {
             currView = view;
         }
 
+    }
+
+    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
+    public void addNum(View view)
+    {
+        if(currCell != "")
+        {
+            String num = view.getResources().getResourceName(view.getId());
+            mediumGame.gameBoard[Integer.parseInt(currCell.substring(0,1))][Integer.parseInt(currCell.substring(2,3))].setNumber(Integer.parseInt(num.substring(num.length() - 1)));
+            refreshCells(Integer.parseInt(currCell.substring(0,1)),Integer.parseInt(currCell.substring(2,3)));
+            currCell = "";
+            currView.setBackgroundTintList(null);
+            currView = null;
+        }
     }
 
     @Override

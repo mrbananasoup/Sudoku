@@ -1048,90 +1048,99 @@
         app:rowCount="1">
 
         <TextView
-            android:id="@+id/textView111"
+            android:id="@+id/btnnum1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/border"
+            android:onClick="addNum"
             android:text="1"
             android:textAlignment="center"
             android:textSize="40sp"
             app:layout_columnWeight="1" />
 
         <TextView
-            android:id="@+id/textView110"
+            android:id="@+id/btnnum2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/border"
+            android:onClick="addNum"
             android:text="2"
             android:textAlignment="center"
             android:textSize="40sp"
             app:layout_columnWeight="1" />
 
         <TextView
-            android:id="@+id/textView109"
+            android:id="@+id/btnnum3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/border"
+            android:onClick="addNum"
             android:text="3"
             android:textAlignment="center"
             android:textSize="40sp"
             app:layout_columnWeight="1" />
 
         <TextView
-            android:id="@+id/textView108"
+            android:id="@+id/btnnum4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/border"
+            android:onClick="addNum"
             android:text="4"
             android:textAlignment="center"
             android:textSize="40sp"
             app:layout_columnWeight="1" />
 
         <TextView
-            android:id="@+id/textView107"
+            android:id="@+id/btnnum5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/border"
+            android:onClick="addNum"
             android:text="5"
             android:textAlignment="center"
             android:textSize="40sp"
             app:layout_columnWeight="1" />
 
         <TextView
-            android:id="@+id/textView106"
+            android:id="@+id/btnnum6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/border"
+            android:onClick="addNum"
             android:text="6"
             android:textAlignment="center"
             android:textSize="40sp"
             app:layout_columnWeight="1" />
 
         <TextView
-            android:id="@+id/textView105"
+            android:id="@+id/btnnum7"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/border"
+            android:onClick="addNum"
             android:text="7"
             android:textAlignment="center"
             android:textSize="40sp"
             app:layout_columnWeight="1" />
 
         <TextView
-            android:id="@+id/textView104"
+            android:id="@+id/btnnum8"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/border"
+            android:onClick="addNum"
             android:text="8"
             android:textAlignment="center"
             android:textSize="40sp"
             app:layout_columnWeight="1" />
 
         <TextView
-            android:id="@+id/textView103"
+            android:id="@+id/btnnum9"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/border"
+            android:onClick="addNum"
             android:text="9"
             android:textAlignment="center"
             android:textSize="40sp"
