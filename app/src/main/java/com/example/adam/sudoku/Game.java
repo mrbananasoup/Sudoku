@@ -17,7 +17,7 @@ import android.widget.TextView;
 import java.util.Arrays;
 
 public class Game extends AppCompatActivity {
-
+    // this is a game
     final SudokuBoard mediumGame = new MediumGame();
     TextView[][] cells = new TextView[9][9];
     View currView = null;
