@@ -51,4 +51,18 @@ public class Cell
     }
 
     public int getPrevNumber() { return prevNumber; }
+
+    public String smallNumToString()
+    {
+        String s = "";
+        int count = 0;
+        for (int i : smallNumbers)
+        {
+            if(i == 0) break;
+            if(count == 4) s += "\n";
+            s += i + ",";
+            count++;
+        }
+        return s;
+    }
 }

@@ -22,6 +22,7 @@ import java.util.Arrays;
 public class Game extends AppCompatActivity {
     SudokuBoard sudokuBoard;
     TextView[][] cells = new TextView[9][9];
+    TextView[][] smallNums = new TextView[9][9];
     View currView = null;
     String currCell = "";
 
@@ -34,9 +35,6 @@ public class Game extends AppCompatActivity {
         sudokuBoard.printGame();
         sudokuBoard.calculateSmall();
 
-        // Just for Test TODO remove later
-        System.out.println(Arrays.toString(sudokuBoard.gameBoard[0][0].getSmallNumbers()));
-
         setContentView(R.layout.smalltest);
 
         for(int i = 0; i < 9; i++)
@@ -45,10 +43,22 @@ public class Game extends AppCompatActivity {
             {
                 String textID = "Cell" + i + "-" + j;
                 int resID = getResources().getIdentifier(textID, "id", getPackageName());
+                String smallID = "small" + i + "-" + j;
+                int smallResID = getResources().getIdentifier(smallID, "id", getPackageName());
+
                 cells[i][j] = ((TextView)findViewById(resID));
                 cells[i][j].setText("" + sudokuBoard.gameBoard[i][j].getNumber());
+                smallNums[i][j] = ((TextView)findViewById(smallResID));
                 //if(sudokuBoard.gameBoard[i][j].getNumber() != 0) cells[i][j].setBackgroundTintList(ColorStateList.valueOf(Color.GRAY)); // TODO for old game screen
-                if(sudokuBoard.gameBoard[i][j].getNumber() != 0) cells[i][j].setBackgroundColor(Color.GRAY);
+                if(sudokuBoard.gameBoard[i][j].getNumber() != 0)
+                {
+                    cells[i][j].setBackgroundColor(Color.GRAY);
+                    smallNums[i][j].setText("0000\n00000");
+                }
+                else
+                {
+                    smallNums[i][j].setText("" + sudokuBoard.gameBoard[i][j].smallNumToString());
+                }
             }
         }
     }
@@ -72,7 +82,6 @@ public class Game extends AppCompatActivity {
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     public void btnCell(View view)
     {
-        System.out.println("-----------------------");
         String id = view.getResources().getResourceName(view.getId());
         id = id.substring(id.length() - 3, id.length());
         if(sudokuBoard.gameBoard[Integer.parseInt(id.substring(0,1))][Integer.parseInt(id.substring(2,3))].getIsEditable())
@@ -80,6 +89,10 @@ public class Game extends AppCompatActivity {
             currCell = id;
             setSelected(view);
         }
+
+        System.out.println("------------------------");
+        System.out.println(sudokuBoard.gameBoard[Integer.parseInt(id.substring(0,1))][Integer.parseInt(id.substring(2,3))].smallNumToString());
+        //System.out.println(Arrays.toString(sudokuBoard.gameBoard[Integer.parseInt(id.substring(0,1))][Integer.parseInt(id.substring(2,3))].getSmallNumbers()));  // Just for Test TODO remove later
     }
 
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
@@ -114,6 +127,27 @@ public class Game extends AppCompatActivity {
             //currView.setBackgroundTintList(null); todo for old game screen
             currView.setBackground(null);
             currView = null;
+
+            sudokuBoard.calculateSmall();
+            refreshSmall();
+        }
+    }
+
+    private void refreshSmall()
+    {
+        for(int i = 0; i < 9; i++)
+        {
+            for(int j = 0; j < 9; j++)
+            {
+                if(sudokuBoard.gameBoard[i][j].getNumber() != 0)
+                {
+                    smallNums[i][j].setText("0000\n00000");
+                }
+                else
+                {
+                    smallNums[i][j].setText("" + sudokuBoard.gameBoard[i][j].smallNumToString());
+                }
+            }
         }
     }
 

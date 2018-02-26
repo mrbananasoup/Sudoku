@@ -48,7 +48,6 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="1,2,3,4\n5,6,7,8,9"
                     android:textSize="@dimen/default_gap"
                     app:layout_columnWeight=".5"
                     app:layout_rowWeight=".5" />
@@ -80,7 +79,6 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="1,2,3,4\n5,6,7,8,9"
                     android:textSize="@dimen/default_gap"
                     app:layout_columnWeight=".5"
                     app:layout_rowWeight=".5" />
@@ -109,11 +107,10 @@
                     app:layout_rowWeight="2" />
 
                 <TextView
-                    android:id="@+id/small1"
+                    android:id="@+id/small0-2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="1,2,3,4\n5,6,7,8,9"
                     android:textSize="@dimen/default_gap"
                     app:layout_columnWeight=".5"
                     app:layout_rowWeight=".5" />
@@ -141,11 +138,10 @@
                     app:layout_rowWeight="2" />
 
                 <TextView
-                    android:id="@+id/small1"
+                    android:id="@+id/small0-3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="1,2,3,4\n5,6,7,8,9"
                     android:textSize="@dimen/default_gap"
                     app:layout_columnWeight=".5"
                     app:layout_rowWeight=".5" />
@@ -173,11 +169,10 @@
                     app:layout_rowWeight="2" />
 
                 <TextView
-                    android:id="@+id/small1"
+                    android:id="@+id/small0-4"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="1,2,3,4\n5,6,7,8,9"
                     android:textSize="@dimen/default_gap"
                     app:layout_columnWeight=".5"
                     app:layout_rowWeight=".5" />
@@ -206,11 +201,10 @@
                     app:layout_rowWeight="2" />
 
                 <TextView
-                    android:id="@+id/small1"
+                    android:id="@+id/small0-5"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="1,2,3,4\n5,6,7,8,9"
                     android:textSize="@dimen/default_gap"
                     app:layout_columnWeight=".5"
                     app:layout_rowWeight=".5" />
@@ -238,11 +232,10 @@
                     app:layout_rowWeight="2" />
 
                 <TextView
-                    android:id="@+id/small1"
+                    android:id="@+id/small0-6"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="1,2,3,4\n5,6,7,8,9"
                     android:textSize="@dimen/default_gap"
                     app:layout_columnWeight=".5"
                     app:layout_rowWeight=".5" />
@@ -270,11 +263,10 @@
                     app:layout_rowWeight="2" />
 
                 <TextView
-                    android:id="@+id/small1"
+                    android:id="@+id/small0-7"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="1,2,3,4\n5,6,7,8,9"
                     android:textSize="@dimen/default_gap"
                     app:layout_columnWeight=".5"
                     app:layout_rowWeight=".5" />
@@ -302,11 +294,10 @@
                     app:layout_rowWeight="2" />
 
                 <TextView
-                    android:id="@+id/small1"
+                    android:id="@+id/small0-8"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="1,2,3,4\n5,6,7,8,9"
                     android:textSize="@dimen/default_gap"
                     app:layout_columnWeight=".5"
                     app:layout_rowWeight=".5" />
@@ -334,11 +325,10 @@
                     app:layout_rowWeight="2" />
 
                 <TextView
-                    android:id="@+id/small1"
+                    android:id="@+id/small1-0"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="1,2,3,4\n5,6,7,8,9"
                     android:textSize="@dimen/default_gap"
                     app:layout_columnWeight=".5"
                     app:layout_rowWeight=".5" />
@@ -366,11 +356,10 @@
                     app:layout_rowWeight="2" />
 
                 <TextView
-                    android:id="@+id/small1"
+                    android:id="@+id/small1-1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="1,2,3,4\n5,6,7,8,9"
                     android:textSize="@dimen/default_gap"
                     app:layout_columnWeight=".5"
                     app:layout_rowWeight=".5" />
@@ -399,11 +388,10 @@
                     app:layout_rowWeight="2" />
 
                 <TextView
-                    android:id="@+id/small1"
+                    android:id="@+id/small1-2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="1,2,3,4\n5,6,7,8,9"
                     android:textSize="@dimen/default_gap"
                     app:layout_columnWeight=".5"
                     app:layout_rowWeight=".5" />
@@ -431,11 +419,10 @@
                     app:layout_rowWeight="2" />
 
                 <TextView
-                    android:id="@+id/small1"
+                    android:id="@+id/small1-3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="1,2,3,4\n5,6,7,8,9"
                     android:textSize="@dimen/default_gap"
                     app:layout_columnWeight=".5"
                     app:layout_rowWeight=".5" />
@@ -463,11 +450,10 @@
                     app:layout_rowWeight="2" />
 
                 <TextView
-                    android:id="@+id/small1"
+                    android:id="@+id/small1-4"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="1,2,3,4\n5,6,7,8,9"
                     android:textSize="@dimen/default_gap"
                     app:layout_columnWeight=".5"
                     app:layout_rowWeight=".5" />
@@ -496,11 +482,10 @@
                     app:layout_rowWeight="2" />
 
                 <TextView
-                    android:id="@+id/small1"
+                    android:id="@+id/small1-5"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="1,2,3,4\n5,6,7,8,9"
                     android:textSize="@dimen/default_gap"
                     app:layout_columnWeight=".5"
                     app:layout_rowWeight=".5" />
@@ -528,11 +513,10 @@
                     app:layout_rowWeight="2" />
 
                 <TextView
-                    android:id="@+id/small1"
+                    android:id="@+id/small1-6"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="1,2,3,4\n5,6,7,8,9"
                     android:textSize="@dimen/default_gap"
                     app:layout_columnWeight=".5"
                     app:layout_rowWeight=".5" />
@@ -560,11 +544,10 @@
                     app:layout_rowWeight="2" />
 
                 <TextView
-                    android:id="@+id/small1"
+                    android:id="@+id/small1-7"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="1,2,3,4\n5,6,7,8,9"
                     android:textSize="@dimen/default_gap"
                     app:layout_columnWeight=".5"
                     app:layout_rowWeight=".5" />
@@ -592,11 +575,10 @@
                     app:layout_rowWeight="2" />
 
                 <TextView
-                    android:id="@+id/small1"
+                    android:id="@+id/small1-8"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="1,2,3,4\n5,6,7,8,9"
                     android:textSize="@dimen/default_gap"
                     app:layout_columnWeight=".5"
                     app:layout_rowWeight=".5" />
@@ -625,11 +607,11 @@
                     app:layout_rowWeight="2" />
 
                 <TextView
-                    android:id="@+id/small1"
+                    android:id="@+id/small2-0"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="1,2,3,4\n5,6,7,8,9"
+                    android:text=""
                     android:textSize="@dimen/default_gap"
                     app:layout_columnWeight=".5"
                     app:layout_rowWeight=".5" />
@@ -658,11 +640,11 @@
                     app:layout_rowWeight="2" />
 
                 <TextView
-                    android:id="@+id/small1"
+                    android:id="@+id/small2-1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="1,2,3,4\n5,6,7,8,9"
+                    android:text=""
                     android:textSize="@dimen/default_gap"
                     app:layout_columnWeight=".5"
                     app:layout_rowWeight=".5" />
@@ -692,11 +674,11 @@
                     app:layout_rowWeight="2" />
 
                 <TextView
-                    android:id="@+id/small1"
+                    android:id="@+id/small2-2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="1,2,3,4\n5,6,7,8,9"
+                    android:text=""
                     android:textSize="@dimen/default_gap"
                     app:layout_columnWeight=".5"
                     app:layout_rowWeight=".5" />
@@ -725,11 +707,11 @@
                     app:layout_rowWeight="2" />
 
                 <TextView
-                    android:id="@+id/small1"
+                    android:id="@+id/small2-3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="1,2,3,4\n5,6,7,8,9"
+                    android:text=""
                     android:textSize="@dimen/default_gap"
                     app:layout_columnWeight=".5"
                     app:layout_rowWeight=".5" />
@@ -758,11 +740,11 @@
                     app:layout_rowWeight="2" />
 
                 <TextView
-                    android:id="@+id/small1"
+                    android:id="@+id/small2-4"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="1,2,3,4\n5,6,7,8,9"
+                    android:text=""
                     android:textSize="@dimen/default_gap"
                     app:layout_columnWeight=".5"
                     app:layout_rowWeight=".5" />
@@ -792,11 +774,11 @@
                     app:layout_rowWeight="2" />
 
                 <TextView
-                    android:id="@+id/small1"
+                    android:id="@+id/small2-5"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="1,2,3,4\n5,6,7,8,9"
+                    android:text=""
                     android:textSize="@dimen/default_gap"
                     app:layout_columnWeight=".5"
                     app:layout_rowWeight=".5" />
@@ -825,11 +807,11 @@
                     app:layout_rowWeight="2" />
 
                 <TextView
-                    android:id="@+id/small1"
+                    android:id="@+id/small2-6"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="1,2,3,4\n5,6,7,8,9"
+                    android:text=""
                     android:textSize="@dimen/default_gap"
                     app:layout_columnWeight=".5"
                     app:layout_rowWeight=".5" />
@@ -858,11 +840,11 @@
                     app:layout_rowWeight="2" />
 
                 <TextView
-                    android:id="@+id/small1"
+                    android:id="@+id/small2-7"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="1,2,3,4\n5,6,7,8,9"
+                    android:text=""
                     android:textSize="@dimen/default_gap"
                     app:layout_columnWeight=".5"
                     app:layout_rowWeight=".5" />
@@ -891,11 +873,11 @@
                     app:layout_rowWeight="2" />
 
                 <TextView
-                    android:id="@+id/small1"
+                    android:id="@+id/small2-8"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="1,2,3,4\n5,6,7,8,9"
+                    android:text=""
                     android:textSize="@dimen/default_gap"
                     app:layout_columnWeight=".5"
                     app:layout_rowWeight=".5" />
@@ -923,11 +905,10 @@
                     app:layout_rowWeight="2" />
 
                 <TextView
-                    android:id="@+id/small1"
+                    android:id="@+id/small3-0"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="1,2,3,4\n5,6,7,8,9"
                     android:textSize="@dimen/default_gap"
                     app:layout_columnWeight=".5"
                     app:layout_rowWeight=".5" />
@@ -955,11 +936,10 @@
                     app:layout_rowWeight="2" />
 
                 <TextView
-                    android:id="@+id/small1"
+                    android:id="@+id/small3-1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="1,2,3,4\n5,6,7,8,9"
                     android:textSize="@dimen/default_gap"
                     app:layout_columnWeight=".5"
                     app:layout_rowWeight=".5" />
@@ -988,11 +968,10 @@
                     app:layout_rowWeight="2" />
 
                 <TextView
-                    android:id="@+id/small1"
+                    android:id="@+id/small3-2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="1,2,3,4\n5,6,7,8,9"
                     android:textSize="@dimen/default_gap"
                     app:layout_columnWeight=".5"
                     app:layout_rowWeight=".5" />
@@ -1020,11 +999,10 @@
                     app:layout_rowWeight="2" />
 
                 <TextView
-                    android:id="@+id/small1"
+                    android:id="@+id/small3-3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="1,2,3,4\n5,6,7,8,9"
                     android:textSize="@dimen/default_gap"
                     app:layout_columnWeight=".5"
                     app:layout_rowWeight=".5" />
@@ -1052,11 +1030,10 @@
                     app:layout_rowWeight="2" />
 
                 <TextView
-                    android:id="@+id/small1"
+                    android:id="@+id/small3-4"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="1,2,3,4\n5,6,7,8,9"
                     android:textSize="@dimen/default_gap"
                     app:layout_columnWeight=".5"
                     app:layout_rowWeight=".5" />
@@ -1085,11 +1062,10 @@
                     app:layout_rowWeight="2" />
 
                 <TextView
-                    android:id="@+id/small1"
+                    android:id="@+id/small3-5"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="1,2,3,4\n5,6,7,8,9"
                     android:textSize="@dimen/default_gap"
                     app:layout_columnWeight=".5"
                     app:layout_rowWeight=".5" />
@@ -1117,11 +1093,10 @@
                     app:layout_rowWeight="2" />
 
                 <TextView
-                    android:id="@+id/small1"
+                    android:id="@+id/small3-6"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="1,2,3,4\n5,6,7,8,9"
                     android:textSize="@dimen/default_gap"
                     app:layout_columnWeight=".5"
                     app:layout_rowWeight=".5" />
@@ -1149,11 +1124,10 @@
                     app:layout_rowWeight="2" />
 
                 <TextView
-                    android:id="@+id/small1"
+                    android:id="@+id/small3-7"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="1,2,3,4\n5,6,7,8,9"
                     android:textSize="@dimen/default_gap"
                     app:layout_columnWeight=".5"
                     app:layout_rowWeight=".5" />
@@ -1181,11 +1155,11 @@
                     app:layout_rowWeight="2" />
 
                 <TextView
-                    android:id="@+id/small1"
+                    android:id="@+id/small3-8"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="1,2,3,4\n5,6,7,8,9"
+                    android:text=""
                     android:textSize="@dimen/default_gap"
                     app:layout_columnWeight=".5"
                     app:layout_rowWeight=".5" />
@@ -1213,11 +1187,11 @@
                     app:layout_rowWeight="2" />
 
                 <TextView
-                    android:id="@+id/small1"
+                    android:id="@+id/small4-0"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="1,2,3,4\n5,6,7,8,9"
+                    android:text=""
                     android:textSize="@dimen/default_gap"
                     app:layout_columnWeight=".5"
                     app:layout_rowWeight=".5" />
@@ -1245,11 +1219,11 @@
                     app:layout_rowWeight="2" />
 
                 <TextView
-                    android:id="@+id/small1"
+                    android:id="@+id/small4-1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="1,2,3,4\n5,6,7,8,9"
+                    android:text=""
                     android:textSize="@dimen/default_gap"
                     app:layout_columnWeight=".5"
                     app:layout_rowWeight=".5" />
@@ -1278,11 +1252,11 @@
                     app:layout_rowWeight="2" />
 
                 <TextView
-                    android:id="@+id/small1"
+                    android:id="@+id/small4-2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="1,2,3,4\n5,6,7,8,9"
+                    android:text=""
                     android:textSize="@dimen/default_gap"
                     app:layout_columnWeight=".5"
                     app:layout_rowWeight=".5" />
@@ -1310,11 +1284,11 @@
                     app:layout_rowWeight="2" />
 
                 <TextView
-                    android:id="@+id/small1"
+                    android:id="@+id/small4-3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="1,2,3,4\n5,6,7,8,9"
+                    android:text=""
                     android:textSize="@dimen/default_gap"
                     app:layout_columnWeight=".5"
                     app:layout_rowWeight=".5" />
@@ -1342,11 +1316,11 @@
                     app:layout_rowWeight="2" />
 
                 <TextView
-                    android:id="@+id/small1"
+                    android:id="@+id/small4-4"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="1,2,3,4\n5,6,7,8,9"
+                    android:text=""
                     android:textSize="@dimen/default_gap"
                     app:layout_columnWeight=".5"
                     app:layout_rowWeight=".5" />
@@ -1375,11 +1349,11 @@
                     app:layout_rowWeight="2" />
 
                 <TextView
-                    android:id="@+id/small1"
+                    android:id="@+id/small4-5"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="1,2,3,4\n5,6,7,8,9"
+                    android:text=""
                     android:textSize="@dimen/default_gap"
                     app:layout_columnWeight=".5"
                     app:layout_rowWeight=".5" />
@@ -1407,11 +1381,11 @@
                     app:layout_rowWeight="2" />
 
                 <TextView
-                    android:id="@+id/small1"
+                    android:id="@+id/small4-6"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="1,2,3,4\n5,6,7,8,9"
+                    android:text=""
                     android:textSize="@dimen/default_gap"
                     app:layout_columnWeight=".5"
                     app:layout_rowWeight=".5" />
@@ -1439,11 +1413,11 @@
                     app:layout_rowWeight="2" />
 
                 <TextView
-                    android:id="@+id/small1"
+                    android:id="@+id/small4-7"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="1,2,3,4\n5,6,7,8,9"
+                    android:text=""
                     android:textSize="@dimen/default_gap"
                     app:layout_columnWeight=".5"
                     app:layout_rowWeight=".5" />
@@ -1471,11 +1445,11 @@
                     app:layout_rowWeight="2" />
 
                 <TextView
-                    android:id="@+id/small1"
+                    android:id="@+id/small4-8"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="1,2,3,4\n5,6,7,8,9"
+                    android:text=""
                     android:textSize="@dimen/default_gap"
                     app:layout_columnWeight=".5"
                     app:layout_rowWeight=".5" />
@@ -1504,11 +1478,11 @@
                     app:layout_rowWeight="2" />
 
                 <TextView
-                    android:id="@+id/small1"
+                    android:id="@+id/small5-0"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="1,2,3,4\n5,6,7,8,9"
+                    android:text=""
                     android:textSize="@dimen/default_gap"
                     app:layout_columnWeight=".5"
                     app:layout_rowWeight=".5" />
@@ -1537,11 +1511,11 @@
                     app:layout_rowWeight="2" />
 
                 <TextView
-                    android:id="@+id/small1"
+                    android:id="@+id/small5-1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="1,2,3,4\n5,6,7,8,9"
+                    android:text=""
                     android:textSize="@dimen/default_gap"
                     app:layout_columnWeight=".5"
                     app:layout_rowWeight=".5" />
@@ -1571,11 +1545,11 @@
                     app:layout_rowWeight="2" />
 
                 <TextView
-                    android:id="@+id/small1"
+                    android:id="@+id/small5-2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="1,2,3,4\n5,6,7,8,9"
+                    android:text=""
                     android:textSize="@dimen/default_gap"
                     app:layout_columnWeight=".5"
                     app:layout_rowWeight=".5" />
@@ -1604,11 +1578,11 @@
                     app:layout_rowWeight="2" />
 
                 <TextView
-                    android:id="@+id/small1"
+                    android:id="@+id/small5-3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="1,2,3,4\n5,6,7,8,9"
+                    android:text=""
                     android:textSize="@dimen/default_gap"
                     app:layout_columnWeight=".5"
                     app:layout_rowWeight=".5" />
@@ -1637,11 +1611,11 @@
                     app:layout_rowWeight="2" />
 
                 <TextView
-                    android:id="@+id/small1"
+                    android:id="@+id/small5-4"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="1,2,3,4\n5,6,7,8,9"
+                    android:text=""
                     android:textSize="@dimen/default_gap"
                     app:layout_columnWeight=".5"
                     app:layout_rowWeight=".5" />
@@ -1671,11 +1645,11 @@
                     app:layout_rowWeight="2" />
 
                 <TextView
-                    android:id="@+id/small1"
+                    android:id="@+id/small5-5"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="1,2,3,4\n5,6,7,8,9"
+                    android:text=""
                     android:textSize="@dimen/default_gap"
                     app:layout_columnWeight=".5"
                     app:layout_rowWeight=".5" />
@@ -1704,11 +1678,11 @@
                     app:layout_rowWeight="2" />
 
                 <TextView
-                    android:id="@+id/small1"
+                    android:id="@+id/small5-6"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="1,2,3,4\n5,6,7,8,9"
+                    android:text=""
                     android:textSize="@dimen/default_gap"
                     app:layout_columnWeight=".5"
                     app:layout_rowWeight=".5" />
@@ -1737,11 +1711,11 @@
                     app:layout_rowWeight="2" />
 
                 <TextView
-                    android:id="@+id/small1"
+                    android:id="@+id/small5-7"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="1,2,3,4\n5,6,7,8,9"
+                    android:text=""
                     android:textSize="@dimen/default_gap"
                     app:layout_columnWeight=".5"
                     app:layout_rowWeight=".5" />
@@ -1770,11 +1744,11 @@
                     app:layout_rowWeight="2" />
 
                 <TextView
-                    android:id="@+id/small1"
+                    android:id="@+id/small5-8"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="1,2,3,4\n5,6,7,8,9"
+                    android:text=""
                     android:textSize="@dimen/default_gap"
                     app:layout_columnWeight=".5"
                     app:layout_rowWeight=".5" />
@@ -1802,11 +1776,11 @@
                     app:layout_rowWeight="2" />
 
                 <TextView
-                    android:id="@+id/small1"
+                    android:id="@+id/small6-0"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="1,2,3,4\n5,6,7,8,9"
+                    android:text=""
                     android:textSize="@dimen/default_gap"
                     app:layout_columnWeight=".5"
                     app:layout_rowWeight=".5" />
@@ -1834,11 +1808,11 @@
                     app:layout_rowWeight="2" />
 
                 <TextView
-                    android:id="@+id/small1"
+                    android:id="@+id/small6-1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="1,2,3,4\n5,6,7,8,9"
+                    android:text=""
                     android:textSize="@dimen/default_gap"
                     app:layout_columnWeight=".5"
                     app:layout_rowWeight=".5" />
@@ -1867,11 +1841,11 @@
                     app:layout_rowWeight="2" />
 
                 <TextView
-                    android:id="@+id/small1"
+                    android:id="@+id/small6-2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="1,2,3,4\n5,6,7,8,9"
+                    android:text=""
                     android:textSize="@dimen/default_gap"
                     app:layout_columnWeight=".5"
                     app:layout_rowWeight=".5" />
@@ -1899,11 +1873,11 @@
                     app:layout_rowWeight="2" />
 
                 <TextView
-                    android:id="@+id/small1"
+                    android:id="@+id/small6-3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="1,2,3,4\n5,6,7,8,9"
+                    android:text=""
                     android:textSize="@dimen/default_gap"
                     app:layout_columnWeight=".5"
                     app:layout_rowWeight=".5" />
@@ -1931,11 +1905,11 @@
                     app:layout_rowWeight="2" />
 
                 <TextView
-                    android:id="@+id/small1"
+                    android:id="@+id/small6-4"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="1,2,3,4\n5,6,7,8,9"
+                    android:text=""
                     android:textSize="@dimen/default_gap"
                     app:layout_columnWeight=".5"
                     app:layout_rowWeight=".5" />
@@ -1964,11 +1938,11 @@
                     app:layout_rowWeight="2" />
 
                 <TextView
-                    android:id="@+id/small1"
+                    android:id="@+id/small6-5"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="1,2,3,4\n5,6,7,8,9"
+                    android:text=""
                     android:textSize="@dimen/default_gap"
                     app:layout_columnWeight=".5"
                     app:layout_rowWeight=".5" />
@@ -1996,11 +1970,11 @@
                     app:layout_rowWeight="2" />
 
                 <TextView
-                    android:id="@+id/small1"
+                    android:id="@+id/small6-6"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="1,2,3,4\n5,6,7,8,9"
+                    android:text=""
                     android:textSize="@dimen/default_gap"
                     app:layout_columnWeight=".5"
                     app:layout_rowWeight=".5" />
@@ -2028,11 +2002,11 @@
                     app:layout_rowWeight="2" />
 
                 <TextView
-                    android:id="@+id/small1"
+                    android:id="@+id/small6-7"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="1,2,3,4\n5,6,7,8,9"
+                    android:text=""
                     android:textSize="@dimen/default_gap"
                     app:layout_columnWeight=".5"
                     app:layout_rowWeight=".5" />
@@ -2060,11 +2034,11 @@
                     app:layout_rowWeight="2" />
 
                 <TextView
-                    android:id="@+id/small1"
+                    android:id="@+id/small6-8"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="1,2,3,4\n5,6,7,8,9"
+                    android:text=""
                     android:textSize="@dimen/default_gap"
                     app:layout_columnWeight=".5"
                     app:layout_rowWeight=".5" />
@@ -2092,11 +2066,11 @@
                     app:layout_rowWeight="2" />
 
                 <TextView
-                    android:id="@+id/small1"
+                    android:id="@+id/small7-0"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="1,2,3,4\n5,6,7,8,9"
+                    android:text=""
                     android:textSize="@dimen/default_gap"
                     app:layout_columnWeight=".5"
                     app:layout_rowWeight=".5" />
@@ -2124,11 +2098,11 @@
                     app:layout_rowWeight="2" />
 
                 <TextView
-                    android:id="@+id/small1"
+                    android:id="@+id/small7-1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="1,2,3,4\n5,6,7,8,9"
+                    android:text=""
                     android:textSize="@dimen/default_gap"
                     app:layout_columnWeight=".5"
                     app:layout_rowWeight=".5" />
@@ -2157,11 +2131,11 @@
                     app:layout_rowWeight="2" />
 
                 <TextView
-                    android:id="@+id/small1"
+                    android:id="@+id/small7-2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="1,2,3,4\n5,6,7,8,9"
+                    android:text=""
                     android:textSize="@dimen/default_gap"
                     app:layout_columnWeight=".5"
                     app:layout_rowWeight=".5" />
@@ -2189,11 +2163,11 @@
                     app:layout_rowWeight="2" />
 
                 <TextView
-                    android:id="@+id/small1"
+                    android:id="@+id/small7-3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="1,2,3,4\n5,6,7,8,9"
+                    android:text=""
                     android:textSize="@dimen/default_gap"
                     app:layout_columnWeight=".5"
                     app:layout_rowWeight=".5" />
@@ -2221,11 +2195,11 @@
                     app:layout_rowWeight="2" />
 
                 <TextView
-                    android:id="@+id/small1"
+                    android:id="@+id/small7-4"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="1,2,3,4\n5,6,7,8,9"
+                    android:text=""
                     android:textSize="@dimen/default_gap"
                     app:layout_columnWeight=".5"
                     app:layout_rowWeight=".5" />
@@ -2254,11 +2228,11 @@
                     app:layout_rowWeight="2" />
 
                 <TextView
-                    android:id="@+id/small1"
+                    android:id="@+id/small7-5"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="1,2,3,4\n5,6,7,8,9"
+                    android:text=""
                     android:textSize="@dimen/default_gap"
                     app:layout_columnWeight=".5"
                     app:layout_rowWeight=".5" />
@@ -2286,11 +2260,11 @@
                     app:layout_rowWeight="2" />
 
                 <TextView
-                    android:id="@+id/small1"
+                    android:id="@+id/small7-6"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="1,2,3,4\n5,6,7,8,9"
+                    android:text=""
                     android:textSize="@dimen/default_gap"
                     app:layout_columnWeight=".5"
                     app:layout_rowWeight=".5" />
@@ -2318,11 +2292,11 @@
                     app:layout_rowWeight="2" />
 
                 <TextView
-                    android:id="@+id/small1"
+                    android:id="@+id/small7-7"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="1,2,3,4\n5,6,7,8,9"
+                    android:text=""
                     android:textSize="@dimen/default_gap"
                     app:layout_columnWeight=".5"
                     app:layout_rowWeight=".5" />
@@ -2350,11 +2324,11 @@
                     app:layout_rowWeight="2" />
 
                 <TextView
-                    android:id="@+id/small1"
+                    android:id="@+id/small7-8"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="1,2,3,4\n5,6,7,8,9"
+                    android:text=""
                     android:textSize="@dimen/default_gap"
                     app:layout_columnWeight=".5"
                     app:layout_rowWeight=".5" />
@@ -2382,11 +2356,11 @@
                     app:layout_rowWeight="2" />
 
                 <TextView
-                    android:id="@+id/small1"
+                    android:id="@+id/small8-0"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="1,2,3,4\n5,6,7,8,9"
+                    android:text=""
                     android:textSize="@dimen/default_gap"
                     app:layout_columnWeight=".5"
                     app:layout_rowWeight=".5" />
@@ -2414,11 +2388,11 @@
                     app:layout_rowWeight="2" />
 
                 <TextView
-                    android:id="@+id/small1"
+                    android:id="@+id/small8-1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="1,2,3,4\n5,6,7,8,9"
+                    android:text=""
                     android:textSize="@dimen/default_gap"
                     app:layout_columnWeight=".5"
                     app:layout_rowWeight=".5" />
@@ -2447,11 +2421,11 @@
                     app:layout_rowWeight="2" />
 
                 <TextView
-                    android:id="@+id/small1"
+                    android:id="@+id/small8-2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="1,2,3,4\n5,6,7,8,9"
+                    android:text=""
                     android:textSize="@dimen/default_gap"
                     app:layout_columnWeight=".5"
                     app:layout_rowWeight=".5" />
@@ -2479,11 +2453,11 @@
                     app:layout_rowWeight="2" />
 
                 <TextView
-                    android:id="@+id/small1"
+                    android:id="@+id/small8-3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="1,2,3,4\n5,6,7,8,9"
+                    android:text=""
                     android:textSize="@dimen/default_gap"
                     app:layout_columnWeight=".5"
                     app:layout_rowWeight=".5" />
@@ -2511,11 +2485,11 @@
                     app:layout_rowWeight="2" />
 
                 <TextView
-                    android:id="@+id/small1"
+                    android:id="@+id/small8-4"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="1,2,3,4\n5,6,7,8,9"
+                    android:text=""
                     android:textSize="@dimen/default_gap"
                     app:layout_columnWeight=".5"
                     app:layout_rowWeight=".5" />
@@ -2544,11 +2518,11 @@
                     app:layout_rowWeight="2" />
 
                 <TextView
-                    android:id="@+id/small1"
+                    android:id="@+id/small8-5"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="1,2,3,4\n5,6,7,8,9"
+                    android:text=""
                     android:textSize="@dimen/default_gap"
                     app:layout_columnWeight=".5"
                     app:layout_rowWeight=".5" />
@@ -2576,11 +2550,11 @@
                     app:layout_rowWeight="2" />
 
                 <TextView
-                    android:id="@+id/small1"
+                    android:id="@+id/small8-6"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="1,2,3,4\n5,6,7,8,9"
+                    android:text=""
                     android:textSize="@dimen/default_gap"
                     app:layout_columnWeight=".5"
                     app:layout_rowWeight=".5" />
@@ -2608,11 +2582,11 @@
                     app:layout_rowWeight="2" />
 
                 <TextView
-                    android:id="@+id/small1"
+                    android:id="@+id/small8-7"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="1,2,3,4\n5,6,7,8,9"
+                    android:text=""
                     android:textSize="@dimen/default_gap"
                     app:layout_columnWeight=".5"
                     app:layout_rowWeight=".5" />
@@ -2640,11 +2614,11 @@
                     app:layout_rowWeight="2" />
 
                 <TextView
-                    android:id="@+id/small1"
+                    android:id="@+id/small8-8"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="1,2,3,4\n5,6,7,8,9"
+                    android:text=""
                     android:textSize="@dimen/default_gap"
                     app:layout_columnWeight=".5"
                     app:layout_rowWeight=".5" />
