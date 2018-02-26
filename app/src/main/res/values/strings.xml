@@ -1,3 +1,16 @@
 <resources>
     <string name="app_name">Sudoku</string>
+
+    <string-array name="pref_difficulty_entries">
+        <item>Easy</item>
+        <item>Medium</item>
+        <item>Hard</item>
+    </string-array>
+    <string-array name="pref_difficulty_entries_values">
+        <item>easy</item>
+        <item>medium</item>
+        <item>hard</item>
+    </string-array>
+    <string name="title_activity_settings">SettingsActivity</string>
+
 </resources>
