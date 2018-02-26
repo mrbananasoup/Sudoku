@@ -30,6 +30,6 @@ public class HardGame extends SudokuBoard
 
     @Override
     protected void calculateSmall() {
-        throw new UnsupportedOperationException();
+
     }
 }

@@ -19,7 +19,7 @@
             android:layout_marginLeft="50dp"
             android:layout_marginRight="50dp"
             android:background="@android:color/holo_blue_bright"
-            android:onClick="openDiff"
+            android:onClick="startGame"
 
             android:text="Start" />
 
