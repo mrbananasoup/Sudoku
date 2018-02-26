@@ -31,9 +31,7 @@
             android:layout_marginRight="50dp"
             android:layout_marginTop="25dp"
             android:background="@android:color/holo_red_light"
-            android:text="Resume"
-            android:onClick="startGame"
-            />
+            android:text="Resume" />
 
         <Button
             android:id="@+id/btnSettings"
@@ -55,9 +53,9 @@
             android:layout_marginRight="50dp"
             android:layout_marginTop="25dp"
             android:background="@android:color/holo_orange_light"
-            android:text="Help"
+            android:onClick="btnHelp"
 
-            />
+            android:text="Help" />
 
     </LinearLayout>
 

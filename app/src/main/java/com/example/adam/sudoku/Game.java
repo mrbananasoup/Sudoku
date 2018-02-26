@@ -24,7 +24,6 @@ public class Game extends AppCompatActivity {
     TextView[][] cells = new TextView[9][9];
     View currView = null;
     String currCell = "";
-    // ...
 
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     public void startGame(View view)
@@ -38,7 +37,7 @@ public class Game extends AppCompatActivity {
         // Just for Test TODO remove later
         System.out.println(Arrays.toString(sudokuBoard.gameBoard[0][0].getSmallNumbers()));
 
-        setContentView(R.layout.game);
+        setContentView(R.layout.smalltest);
 
         for(int i = 0; i < 9; i++)
         {
@@ -48,7 +47,8 @@ public class Game extends AppCompatActivity {
                 int resID = getResources().getIdentifier(textID, "id", getPackageName());
                 cells[i][j] = ((TextView)findViewById(resID));
                 cells[i][j].setText("" + sudokuBoard.gameBoard[i][j].getNumber());
-                if(sudokuBoard.gameBoard[i][j].getNumber() != 0) cells[i][j].setBackgroundTintList(ColorStateList.valueOf(Color.GRAY));
+                //if(sudokuBoard.gameBoard[i][j].getNumber() != 0) cells[i][j].setBackgroundTintList(ColorStateList.valueOf(Color.GRAY)); // TODO for old game screen
+                if(sudokuBoard.gameBoard[i][j].getNumber() != 0) cells[i][j].setBackgroundColor(Color.GRAY);
             }
         }
     }
@@ -59,6 +59,11 @@ public class Game extends AppCompatActivity {
         startActivity(settingsIntent);
     }
 
+    public void btnHelp(View view)
+    {
+        setContentView(R.layout.help);
+    }
+
     private void refreshCells(int x, int y)
     {
         cells[x][y].setText("" + sudokuBoard.gameBoard[x][y].getNumber());
@@ -67,29 +72,32 @@ public class Game extends AppCompatActivity {
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     public void btnCell(View view)
     {
+        System.out.println("-----------------------");
         String id = view.getResources().getResourceName(view.getId());
         id = id.substring(id.length() - 3, id.length());
         if(sudokuBoard.gameBoard[Integer.parseInt(id.substring(0,1))][Integer.parseInt(id.substring(2,3))].getIsEditable())
         {
             currCell = id;
             setSelected(view);
-            //refreshCells(Integer.parseInt(id.substring(0,1)),Integer.parseInt(id.substring(2,3)));
         }
     }
 
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     private void setSelected(View view)
     {
-        if(currView != null) currView.setBackgroundTintList(null);
+        //if(currView != null) currView.setBackgroundTintList(null); todo for old game screen
+        if(currView != null) currView.setBackground(null);
         if(currView == view)
         {
-            currView.setBackgroundTintList(null);
+            //currView.setBackgroundTintList(null); todo for ild game screen
+            currView.setBackground(null);
             currView = null;
             currCell = "";
         }
         else
         {
-            view.setBackgroundTintList(ColorStateList.valueOf(Color.BLUE));
+            //view.setBackgroundTintList(ColorStateList.valueOf(Color.BLUE)); todo for old game screen
+            view.setBackgroundColor(Color.BLUE);
             currView = view;
         }
     }
@@ -103,7 +111,8 @@ public class Game extends AppCompatActivity {
             sudokuBoard.gameBoard[Integer.parseInt(currCell.substring(0,1))][Integer.parseInt(currCell.substring(2,3))].setNumber(Integer.parseInt(num.substring(num.length() - 1)));
             refreshCells(Integer.parseInt(currCell.substring(0,1)),Integer.parseInt(currCell.substring(2,3)));
             currCell = "";
-            currView.setBackgroundTintList(null);
+            //currView.setBackgroundTintList(null); todo for old game screen
+            currView.setBackground(null);
             currView = null;
         }
     }

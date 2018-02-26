@@ -29,7 +29,5 @@ public class HardGame extends SudokuBoard
     }
 
     @Override
-    protected void calculateSmall() {
-
-    }
+    protected void calculateSmall() {}
 }
