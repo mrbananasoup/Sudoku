@@ -9,6 +9,7 @@ import java.util.Arrays;
 public class Cell
 {
     private int number;
+    private int prevNumber;
     private int[] smallNumbers;
     private boolean isEditable;
 
@@ -40,6 +41,7 @@ public class Cell
 
     public void setNumber(int number)
     {
+        this.prevNumber = this.number; // prev number set incorporated into set new number
         this.number = number;
     }
 
@@ -47,4 +49,6 @@ public class Cell
     {
         this.smallNumbers = smallNumbers;
     }
+
+    public int getPrevNumber() { return prevNumber; }
 }
