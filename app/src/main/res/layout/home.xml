@@ -53,7 +53,7 @@
             android:layout_marginRight="50dp"
             android:layout_marginTop="25dp"
             android:background="@android:color/holo_orange_light"
-            android:onClick="btnHelp"
+            android:onClick="openHelp"
 
             android:text="Help" />
 

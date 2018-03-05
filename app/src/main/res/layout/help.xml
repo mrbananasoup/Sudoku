@@ -1,70 +1,65 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
 
     xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+
+    android:orientation="vertical"
     android:weightSum="10"
-
-
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:orientation="vertical">
+    tools:context="com.example.adam.sudoku.HelpActivity">
 
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="149dp"
-        android:layout_height="0dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_below="@+id/textView3"
+        android:layout_toEndOf="@+id/guideline"
+        android:layout_toRightOf="@+id/guideline"
         android:text="Tap and HOLD a cell to bring up the elimination numbers. Tap one or more elimination numbers to make them appear around the cell. These are used to eliminate possible answers for each cell. On easier difficulty, these may fill in automatically."
-        tools:layout_constraintTop_creator="1"
-        tools:layout_constraintBottom_creator="1"
-        tools:layout_constraintLeft_creator="1"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="16dp"
-        android:layout_marginTop="230dp" />
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="201dp" />
 
     <TextView
         android:id="@+id/textView3"
-        android:layout_width="0dp"
-        android:layout_height="131dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/guideline"
+        android:layout_toEndOf="@+id/guideline"
+        android:layout_toRightOf="@+id/guideline"
         android:text="The objective of Sudoku is to fill a 9x9 grid, so that each column, each row, and each of the 3x3 boxes (blocks) contains the digits 1 through 9 exactly once each."
         android:textSize="10pt"
-        tools:layout_constraintRight_creator="1"
-        tools:layout_constraintBottom_creator="1"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
-        app:layout_constraintRight_toRightOf="parent"
-        tools:layout_constraintLeft_creator="1"
-        app:layout_constraintLeft_toLeftOf="parent"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        app:layout_constraintHorizontal_bias="1.0"
-        tools:layout_editor_absoluteY="25dp" />
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="53dp" />
 
     <TextView
         android:id="@+id/textView4"
-        android:layout_width="375dp"
-        android:layout_height="29dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/textView2"
         android:text="The game uses touch controls. Tap a cell to bring up the number menu: tap a number to set it in that cell."
-        tools:layout_editor_absoluteY="182dp"
-        tools:layout_editor_absoluteX="13dp" />
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="16dp" />
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="206dp"
-        android:layout_height="284dp"
-        app:srcCompat="@drawable/rules1"
-        tools:layout_constraintTop_creator="1"
-        tools:layout_constraintRight_creator="1"
-        app:layout_constraintRight_toRightOf="@+id/textView4"
-        app:layout_constraintTop_toBottomOf="@+id/textView4"
-        android:layout_marginTop="11dp"
-        android:layout_marginRight="20dp" />
+        android:layout_width="400dp"
+        android:layout_height="400dp"
+        android:layout_below="@+id/textView4"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/rules1"
+        tools:layout_editor_absoluteX="162dp"
+        tools:layout_editor_absoluteY="202dp" />
 
     <android.support.constraint.Guideline
+        android:id="@+id/guideline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/guideline"
-        app:layout_constraintGuide_begin="20dp"
-        android:orientation="horizontal" />
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="20dp" />
 
-</android.support.constraint.ConstraintLayout>
+</RelativeLayout>
