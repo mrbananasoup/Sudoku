@@ -6,6 +6,27 @@
     android:layout_height="match_parent">
 
     <LinearLayout
+        android:id="@+id/winBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/holo_blue_bright"
+        android:orientation="vertical"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="YOU HAVE WON !!!!"
+            android:textSize="40sp" />
+    </LinearLayout>
+
+    <LinearLayout
         android:id="@+id/lin1"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
