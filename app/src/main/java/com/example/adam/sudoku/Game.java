@@ -70,6 +70,12 @@ public class Game extends AppCompatActivity {
         startActivity(settingsIntent);
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
+    public void openHelp(View view){
+        Intent helpIntent = new Intent(this, HelpActivity.class);
+        startActivity(helpIntent);
+    }
+
     public void btnHelp(View view)
     {
         setContentView(R.layout.help);
