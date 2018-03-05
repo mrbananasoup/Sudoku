@@ -50,7 +50,7 @@ public class Game extends AppCompatActivity {
                 cells[i][j].setText("" + sudokuBoard.gameBoard[i][j].getNumber());
                 smallNums[i][j] = ((TextView)findViewById(smallResID));
                 //if(sudokuBoard.gameBoard[i][j].getNumber() != 0) cells[i][j].setBackgroundTintList(ColorStateList.valueOf(Color.GRAY)); // TODO for old game screen
-                if(sudokuBoard.gameBoard[i][j].getNumber() != 0)
+                if(sudokuBoard.gameBoard[i][j].getIsEditable() == false)
                 {
                     cells[i][j].setBackgroundColor(Color.GRAY);
                     smallNums[i][j].setText("0000\n00000");
@@ -139,7 +139,7 @@ public class Game extends AppCompatActivity {
         {
             for(int j = 0; j < 9; j++)
             {
-                if(sudokuBoard.gameBoard[i][j].getNumber() != 0)
+                if(sudokuBoard.gameBoard[i][j].getIsEditable() == false)
                 {
                     smallNums[i][j].setText("0000\n00000");
                 }
@@ -159,6 +159,8 @@ public class Game extends AppCompatActivity {
 
     protected SudokuBoard initSudokuBoard() {
         String difficulty = getDifficulty();
+
+        System.out.println(difficulty + "------------------------");
 
         switch(difficulty) {
             case "easy":
