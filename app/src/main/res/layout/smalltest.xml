@@ -6,6 +6,27 @@
     android:layout_height="match_parent">
 
     <LinearLayout
+        android:id="@+id/winBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/holo_blue_bright"
+        android:orientation="vertical"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="YOU HAVE WON !!!!"
+            android:textSize="40sp" />
+    </LinearLayout>
+
+    <LinearLayout
         android:id="@+id/lin1"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -2634,7 +2655,7 @@
         android:layout_height="wrap_content"
         android:paddingLeft="10dp"
         android:paddingRight="10dp"
-        app:columnCount="10"
+        app:columnCount="11"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -2743,11 +2764,23 @@
             app:layout_columnWeight="1" />
 
         <TextView
-            android:id="@+id/textView102"
+            android:id="@+id/undo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/border"
-            android:text="0"
+            android:onClick="undo"
+            android:text="B"
+            android:textAlignment="center"
+            android:textSize="30sp"
+            app:layout_columnWeight="1" />
+
+        <TextView
+            android:id="@+id/redo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border"
+            android:onClick="redo"
+            android:text="F"
             android:textAlignment="center"
             android:textSize="30sp"
             app:layout_columnWeight="1" />
