@@ -169,6 +169,16 @@ public class Game extends AppCompatActivity {
         setContentView(R.layout.win);
     }
 
+    public void undo(View view)
+    {
+        System.out.println("UNDO CLICKED ___________________");
+    }
+
+    public void redo(View view)
+    {
+        System.out.println("REDO CLICKED ___________________");
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
