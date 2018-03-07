@@ -6,18 +6,22 @@ package com.example.adam.sudoku;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.content.res.ColorStateList;
 import android.graphics.Color;
 import android.os.Build;
+import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.support.annotation.RequiresApi;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
-import android.widget.Button;
 import android.widget.TextView;
+import com.google.gson.Gson;
 
-import java.util.Arrays;
+
+import org.json.JSONObject;
+
+import java.util.ArrayList;
+import java.util.LinkedList;
 
 public class Game extends AppCompatActivity {
     SudokuBoard sudokuBoard;
@@ -134,6 +138,8 @@ public class Game extends AppCompatActivity {
             currView.setBackground(null);
             currView = null;
 
+            LastChanged(currCell.substring(0,1),currCell.substring(2,3));
+
             sudokuBoard.calculateSmall();
             refreshSmall();
         }
@@ -183,4 +189,106 @@ public class Game extends AppCompatActivity {
         return sharedPreferences.getString("pref_difficulty", "");
 
     }
+
+
+    // debug function to log undo/redo changes
+    private void debugLogUndo(int cellX, int cellY){
+        Log.d("UNDO", "cell changing from " + sudokuBoard.gameBoard[cellX][cellY].getNumber() +
+        " to " + sudokuBoard.gameBoard[cellX][cellY].getPrevNumber());
+    }
+
+    private void debugLogRedo(int cellX, int cellY){
+        Log.d("REDO", "cell changing from " + sudokuBoard.gameBoard[cellX][cellY].getPrevNumber() +
+                " to " + sudokuBoard.gameBoard[cellX][cellY].getNumber());
+    }
+
+    // sudokuBoard.gameBoard[x][y]
+
+    // TO DO:
+    // 1. linked list containing the X/Y of the last 5 changes
+        // change in sudokuboard or game?
+    // 2. function that triggers the undo / redo based on button press
+        // add the buttons to the overlay that appears when you tap a cell
+    // 3. visible counter for number of undo/redos available
+        // visible at top of board? side of board?
+
+    // UNDO / REDO
+
+    class Point {   // pointer for the 2d linkedlist references
+        private int x;
+        private int y;
+
+        public Point(int x, int y) {
+            this.x = x;
+            this.y = y;
+        }
+
+        public Point(){};
+    }
+
+    private final int undoConst = 5;
+
+    public void LastChanged(String x, String y){
+        // stores a reference to the last cell that was changed by the user
+        Lx = Integer.parseInt(x);
+        Ly = Integer.parseInt(y);
+    }
+
+    public int Lx, Ly;
+
+
+    public boolean Undo(Cell getCell){
+        if ((getCell.getPrevNumber() == 0) || (getCell.getPrevNumber() == getCell.getNumber())){
+            return false;   //return 0 if no undo can be made
+        }
+        addToUndoFirst(Lx, Ly);
+        return true;
+    }
+
+    public boolean Redo(Cell getCell){
+        if (redoList.size() == 0){
+            return false; // return 0 if there is nothing to redo
+        }
+        return true;
+
+    }
+
+    LinkedList<Point> undoList = new LinkedList<>();
+
+    private void addToUndoLast(int x, int y){
+        undoList.addLast(new Point(x,y));
+    }
+    private void addToUndoFirst(int x, int y){
+        undoList.push(new Point(x,y));
+        // push new element to front of list
+    }
+
+    private void addToUndo(int x, int y){
+        if (undoList.size() >= undoConst) {
+            // if already 5, remove oldest pointer
+            undoList.removeLast();
+            addToUndoFirst(x,y);
+        }
+    }
+
+    LinkedList<Point> redoList = new LinkedList<>();
+
+    private void addToRedoLast(int x, int y){
+        undoList.addLast(new Point(x,y));
+    }
+
+    private void addToRedoFirst(int x, int y){
+        redoList.push(new Point(x,y));
+        // push new element to front of list
+    }
+
+    private void addToRedo(int x, int y){
+        if (redoList.size() >= undoConst){
+            // if already 5, remove oldest pointer
+            redoList.removeLast();
+            addToRedoFirst(x,y);
+        }
+    }
+
+
 }

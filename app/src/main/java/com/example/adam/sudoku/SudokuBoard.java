@@ -16,6 +16,8 @@ public abstract class SudokuBoard
 
     private int operations;
 
+
+
     public SudokuBoard()
     {
         solutionBoard = new Cell[BOARD_WIDTH][BOARD_HEIGHT];
