@@ -14,6 +14,8 @@ import android.support.annotation.RequiresApi;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import com.google.gson.Gson;
 
@@ -54,7 +56,7 @@ public class Game extends AppCompatActivity {
                 cells[i][j].setText("" + sudokuBoard.gameBoard[i][j].getNumber());
                 smallNums[i][j] = ((TextView)findViewById(smallResID));
                 //if(sudokuBoard.gameBoard[i][j].getNumber() != 0) cells[i][j].setBackgroundTintList(ColorStateList.valueOf(Color.GRAY)); // TODO for old game screen
-                if(sudokuBoard.gameBoard[i][j].getNumber() != 0)
+                if(sudokuBoard.gameBoard[i][j].getIsEditable() == false)
                 {
                     cells[i][j].setBackgroundColor(Color.GRAY);
                     smallNums[i][j].setText("0000\n00000");
@@ -142,6 +144,11 @@ public class Game extends AppCompatActivity {
 
             sudokuBoard.calculateSmall();
             refreshSmall();
+
+            if(sudokuBoard.checkSolution() == true)
+            {
+                youHaveWon();
+            }
         }
     }
 
@@ -151,7 +158,7 @@ public class Game extends AppCompatActivity {
         {
             for(int j = 0; j < 9; j++)
             {
-                if(sudokuBoard.gameBoard[i][j].getNumber() != 0)
+                if(sudokuBoard.gameBoard[i][j].getIsEditable() == false)
                 {
                     smallNums[i][j].setText("0000\n00000");
                 }
@@ -163,6 +170,22 @@ public class Game extends AppCompatActivity {
         }
     }
 
+    private void youHaveWon()
+    {
+        System.out.println("YOU HAVE WON ------------------");
+        setContentView(R.layout.win);
+    }
+
+    public void undo(View view)
+    {
+        System.out.println("UNDO CLICKED ___________________");
+    }
+
+    public void redo(View view)
+    {
+        System.out.println("REDO CLICKED ___________________");
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -171,6 +194,8 @@ public class Game extends AppCompatActivity {
 
     protected SudokuBoard initSudokuBoard() {
         String difficulty = getDifficulty();
+
+        System.out.println(difficulty + "------------------------");
 
         switch(difficulty) {
             case "easy":
