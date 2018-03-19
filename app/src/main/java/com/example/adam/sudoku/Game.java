@@ -140,7 +140,7 @@ public class Game extends AppCompatActivity {
             currView.setBackground(null);
             currView = null;
 
-            LastChanged(currCell.substring(0,1),currCell.substring(2,3));
+            LastChanged(currCell.substring(0,1),currCell.substring(1,2));
 
             sudokuBoard.calculateSmall();
             refreshSmall();
@@ -179,6 +179,7 @@ public class Game extends AppCompatActivity {
     public void undo(View view)
     {
         System.out.println("UNDO CLICKED ___________________");
+        Undo(sudokuBoard.gameBoard[Lx][Ly]);
     }
 
     public void redo(View view)
@@ -222,12 +223,10 @@ public class Game extends AppCompatActivity {
         " to " + sudokuBoard.gameBoard[cellX][cellY].getPrevNumber());
     }
 
-    private void debugLogRedo(int cellX, int cellY){
+    private void debugLogRedo(int cellX, int cellY) {
         Log.d("REDO", "cell changing from " + sudokuBoard.gameBoard[cellX][cellY].getPrevNumber() +
                 " to " + sudokuBoard.gameBoard[cellX][cellY].getNumber());
     }
-
-    // sudokuBoard.gameBoard[x][y]
 
     // TO DO:
     // 1. linked list containing the X/Y of the last 5 changes
@@ -237,7 +236,7 @@ public class Game extends AppCompatActivity {
     // 3. visible counter for number of undo/redos available
         // visible at top of board? side of board?
 
-    // UNDO / REDO
+    // UNDO / REDO created by James
 
     class Point {   // pointer for the 2d linkedlist references
         private int x;
@@ -260,7 +259,7 @@ public class Game extends AppCompatActivity {
     }
 
     public int Lx, Ly;
-
+    public Cell getCell;
 
     public boolean Undo(Cell getCell){
         if ((getCell.getPrevNumber() == 0) || (getCell.getPrevNumber() == getCell.getNumber())){
