@@ -141,7 +141,7 @@ public class Game extends AppCompatActivity {
             currView.setBackground(null);
             currView = null;
 
-            copyToGameStates(sudokuBoard.gameBoard);
+            copyToGameStates(sudokuBoard.copyBoard(sudokuBoard.gameBoard));
             //LastChanged(currCell.substring(0,1),currCell.substring(1,2));
 
             sudokuBoard.calculateSmall();
@@ -267,13 +267,6 @@ public class Game extends AppCompatActivity {
         } else {
             gameStates.push(board);
         }
-    }
-
-    public Cell[][] copyFromGameStates(){
-        // not working yet
-        Cell[][] board = null;
-
-        return board;
     }
 
     public void setGameBoardUndo(int pos){

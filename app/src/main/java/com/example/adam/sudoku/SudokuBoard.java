@@ -152,4 +152,18 @@ public abstract class SudokuBoard
         System.out.println();
     }
 
+    public Cell[][] copyBoard(Cell[][] board)
+    {
+        Cell[][] returnCell = new Cell[9][9];
+
+        for(int i=0;i<9;i++)
+        {
+            for(int j=0;j<9;j++)
+            {
+                returnCell[i][j] = new Cell(board[i][j].getNumber());
+            }
+        }
+        return returnCell;
+    }
+
 }
