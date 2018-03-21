@@ -24,6 +24,7 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
+import java.util.Stack;
 
 public class Game extends AppCompatActivity {
     SudokuBoard sudokuBoard;
@@ -180,11 +181,13 @@ public class Game extends AppCompatActivity {
     {
         System.out.println("UNDO CLICKED ___________________");
         //Undo(sudokuBoard.gameBoard[Lx][Ly]);
+        setGameBoardUndo(pos);
     }
 
     public void redo(View view)
     {
         System.out.println("REDO CLICKED ___________________");
+        setGameBoardRedo(pos);
     }
 
     @Override
@@ -254,6 +257,112 @@ public class Game extends AppCompatActivity {
     int gsFirst, gsLast = 0;    //initialise as 0 : empty
     int pos = 0;       //initialise as 0 : default position
 
+    public UndoRedoStack<Cell[][]> gameStates = new UndoRedoStack<>();
+
+    public void copyToGameStates(Cell[][] board){
+        if (gameStates.undoStack.size() >= undoConst){
+            gameStates.pop();
+            gameStates.push(board);
+        } else {
+            gameStates.push(board);
+        }
+    }
+
+    public Cell[][] copyFromGameStates(){
+        // not working yet
+        Cell[][] board = null;
+
+        return board;
+    }
+
+    public void setGameBoardUndo(int pos){
+        // replaces the current sudoku board with a stored copy
+        gameStates.undo();
+        sudokuBoard.gameBoard = (Cell[][]) gameStates.undoStack.pop();
+        // cast to cell[][] as you need a specific type
+    }
+
+    public void setGameBoardRedo(int pos){
+        // replaces the current sudoku board with a stored copy
+        gameStates.redo();
+        sudokuBoard.gameBoard = (Cell[][]) gameStates.redoStack.pop();
+    }
+
+    public class UndoRedoStack<E> extends Stack<E>{
+        private Stack undoStack;
+        private Stack redoStack;
+
+        //construct an empty undo redo stack
+        public UndoRedoStack(){
+            undoStack = new Stack();
+            redoStack = new Stack();
+        }
+
+        //pushes and returns value at top of stack
+        public E push(E value){
+            super.push(value);
+            undoStack.push("push");
+            redoStack.clear();
+            return value;
+        }
+
+        public E pop(){
+            E value = super.pop();
+            undoStack.push(value);
+            undoStack.push("pop");
+            redoStack.clear();
+            return value;
+        }
+
+        public boolean canWeUndo(){
+            return !undoStack.isEmpty();
+        }
+
+        // undoes the last move
+        // can only undo if moves have been made
+        public void undo(){
+            if (!canWeUndo()){
+                //throw new IllegalStateException();
+            }
+            Object action = undoStack.pop();
+            if (action.equals("push")){
+                E value = super.pop();
+                redoStack.push(value);
+                redoStack.push("push");
+            } else {
+                E value = (E) undoStack.pop();
+                super.push(value);
+                redoStack.push("pop");
+            }
+
+        }
+
+        public boolean canWeRedo(){
+            return !redoStack.isEmpty();
+        }
+
+        // redoes the last move
+        // can only redo if moves have been undone
+        public void redo(){
+            if (!canWeRedo()){
+                //throw new IllegalStateException();
+            }
+            Object action = redoStack.pop();
+            if (action.equals("push")){
+                E value = (E) redoStack.pop();
+                super.push(value);
+                undoStack.push("push");
+            } else {
+                E value = super.pop();
+                undoStack.push(value);
+                undoStack.push("pop");
+            }
+        }
+    }
+
+
+
+    /*
     ArrayList<Cell[][]> gameStates = new ArrayList<>();
     int gameState;  // empty int to refer to current position in the game list
 
@@ -262,25 +371,21 @@ public class Game extends AppCompatActivity {
     public Cell[][] copyFromGameStates(Cell[][] boardCopy){
         // returns the boardCopy from the gameStates array list
         return boardCopy; //return multi-dimension array of cell
+
     }
 
     public void copyToGameStates(int pos, Cell[][] boardCopy){
         // stores a copy of the board to gameStates
-        if (gsFirst == 0 && gsLast == 0){
-            gsLast = 1;
-        }
+        if (gsLast == 0){ gsLast = 1; }
 
         // if the last is at 5
-        if (gsLast == 5)
-        {
+        if (gsLast == 5) {
             // if list is full then shift list down
-            for(int n = 0; n < 5; n++)
-            {
-                copyToGameStates(n++,gameStates.get(n));
+            for (int n = 0; n < 5; n++) {
+                copyToGameStates(n++, gameStates.get(n));
             }
-
         }
-        gameStates.set(pos, boardCopy);
+        gameStates.add(boardCopy);
     }
 
     public void setGameBoard(int pos){
@@ -322,7 +427,7 @@ public class Game extends AppCompatActivity {
 
     }
 
-    /*
+
 
 
 
