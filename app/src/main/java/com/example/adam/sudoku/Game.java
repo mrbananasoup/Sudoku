@@ -140,7 +140,7 @@ public class Game extends AppCompatActivity {
             currView.setBackground(null);
             currView = null;
 
-            LastChanged(currCell.substring(0,1),currCell.substring(1,2));
+            //LastChanged(currCell.substring(0,1),currCell.substring(1,2));
 
             sudokuBoard.calculateSmall();
             refreshSmall();
@@ -179,7 +179,7 @@ public class Game extends AppCompatActivity {
     public void undo(View view)
     {
         System.out.println("UNDO CLICKED ___________________");
-        Undo(sudokuBoard.gameBoard[Lx][Ly]);
+        //Undo(sudokuBoard.gameBoard[Lx][Ly]);
     }
 
     public void redo(View view)
@@ -250,69 +250,85 @@ public class Game extends AppCompatActivity {
         public Point(){};
     }
 
-    private final int undoConst = 5;
+    private final int undoConst = 5; // constant for max number of last undo/redo attempts stored
+    int gsFirst, gsLast = 0;    //initialise as 0 : empty
+    int pos = 0;       //initialise as 0 : default position
 
-    public void LastChanged(String x, String y){
-        // stores a reference to the last cell that was changed by the user
-        Lx = Integer.parseInt(x);
-        Ly = Integer.parseInt(y);
+    ArrayList<Cell[][]> gameStates = new ArrayList<>();
+    int gameState;  // empty int to refer to current position in the game list
+
+    public int setGameState(int X) { this.gameState = X; return this.gameState;} ;
+
+    public Cell[][] copyFromGameStates(Cell[][] boardCopy){
+        // returns the boardCopy from the gameStates array list
+        return boardCopy; //return multi-dimension array of cell
     }
 
-    public int Lx, Ly;
-    public Cell getCell;
-
-    public boolean Undo(Cell getCell){
-        if ((getCell.getPrevNumber() == 0) || (getCell.getPrevNumber() == getCell.getNumber())){
-            return false;   //return 0 if no undo can be made
+    public void copyToGameStates(int pos, Cell[][] boardCopy){
+        // stores a copy of the board to gameStates
+        if (gsFirst == 0 && gsLast == 0){
+            gsLast = 1;
         }
-        addToUndoFirst(Lx, Ly);
-        return true;
-    }
 
-    public boolean Redo(Cell getCell){
-        if (redoList.size() == 0){
-            return false; // return 0 if there is nothing to redo
+        // if the last is at 5
+        if (gsLast == 5)
+        {
+            // if list is full then shift list down
+            for(int n = 0; n < 5; n++)
+            {
+                copyToGameStates(n++,gameStates.get(n));
+            }
+
         }
-        return true;
+        gameStates.set(pos, boardCopy);
+    }
+
+    public void setGameBoard(int pos){
+        // replaces the current sudoku board with a stored copy
+        // call copyFromGameStates
+        sudokuBoard.gameBoard = copyFromGameStates(gameStates.get(pos));
+        // this line right here gets the gameState at position (pos)
 
     }
 
-    LinkedList<Point> undoList = new LinkedList<>();
+    public void UndoGame(int pos){
+        // change game board to previous position
+        // if not at lower limit (5)
+        // call setGameBoard with position as parameter Pos
+            // put check here
 
-    private void addToUndoLast(int x, int y){
-        undoList.addLast(new Point(x,y));
-    }
-    private void addToUndoFirst(int x, int y){
-        undoList.push(new Point(x,y));
-        // push new element to front of list
-    }
+        // if the 'last' (oldest) entry is not the same count as the constant
+        // AND position is not at Last
 
-    private void addToUndo(int x, int y){
-        if (undoList.size() >= undoConst) {
-            // if already 5, remove oldest pointer
-            undoList.removeLast();
-            addToUndoFirst(x,y);
+        //if gsLast is at 5 (the max) nothing will happen
+        if(gsLast != undoConst && pos != gsLast){
+            pos++;
+            setGameBoard(pos);
         }
+
     }
 
-    LinkedList<Point> redoList = new LinkedList<>();
+    public void RedoGame(int pos){
+        // change game board to next position
+        // if not at upper limit (0)
+        // call setGameBoard with position as parameter Pos
+            // put check here
 
-    private void addToRedoLast(int x, int y){
-        undoList.addLast(new Point(x,y));
-    }
-
-    private void addToRedoFirst(int x, int y){
-        redoList.push(new Point(x,y));
-        // push new element to front of list
-    }
-
-    private void addToRedo(int x, int y){
-        if (redoList.size() >= undoConst){
-            // if already 5, remove oldest pointer
-            redoList.removeLast();
-            addToRedoFirst(x,y);
+        // if gsFirst
+        if(pos != 0){
+            pos--;
+            setGameBoard(pos);
         }
+
     }
+
+    /*
+
+
+
+
+     */
+
 
 
 }
