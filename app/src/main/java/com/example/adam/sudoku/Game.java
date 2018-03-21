@@ -321,20 +321,18 @@ public class Game extends AppCompatActivity {
         // undoes the last move
         // can only undo if moves have been made
         public void undo(){
-            if (!canWeUndo()){
-                //throw new IllegalStateException();
+            if (canWeUndo()) {
+                Object action = undoStack.pop();
+                if (action.equals("push")) {
+                    E value = super.pop();
+                    redoStack.push(value);
+                    redoStack.push("push");
+                } else {
+                    E value = (E) undoStack.pop();
+                    super.push(value);
+                    redoStack.push("pop");
+                }
             }
-            Object action = undoStack.pop();
-            if (action.equals("push")){
-                E value = super.pop();
-                redoStack.push(value);
-                redoStack.push("push");
-            } else {
-                E value = (E) undoStack.pop();
-                super.push(value);
-                redoStack.push("pop");
-            }
-
         }
 
         public boolean canWeRedo(){
@@ -344,18 +342,17 @@ public class Game extends AppCompatActivity {
         // redoes the last move
         // can only redo if moves have been undone
         public void redo(){
-            if (!canWeRedo()){
-                //throw new IllegalStateException();
-            }
-            Object action = redoStack.pop();
-            if (action.equals("push")){
-                E value = (E) redoStack.pop();
-                super.push(value);
-                undoStack.push("push");
-            } else {
-                E value = super.pop();
-                undoStack.push(value);
-                undoStack.push("pop");
+            if (canWeRedo()) {
+                Object action = redoStack.pop();
+                if (action.equals("push")) {
+                    E value = (E) redoStack.pop();
+                    super.push(value);
+                    undoStack.push("push");
+                } else {
+                    E value = super.pop();
+                    undoStack.push(value);
+                    undoStack.push("pop");
+                }
             }
         }
     }
