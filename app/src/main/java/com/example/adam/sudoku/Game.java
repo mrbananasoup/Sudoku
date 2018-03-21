@@ -141,6 +141,7 @@ public class Game extends AppCompatActivity {
             currView.setBackground(null);
             currView = null;
 
+            copyToGameStates(sudokuBoard.gameBoard);
             //LastChanged(currCell.substring(0,1),currCell.substring(1,2));
 
             sudokuBoard.calculateSmall();
