@@ -9,7 +9,7 @@ import java.util.Arrays;
 public class Cell
 {
     private int number;
-    private int prevNumber;
+    private int prevNumber = 0;
     private int[] smallNumbers;
     private boolean isEditable;
 
