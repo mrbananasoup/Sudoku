@@ -35,6 +35,7 @@ public class Game extends AppCompatActivity {
         sudokuBoard.calculateSmall();
 
         this.loadGameView(view);
+        this.saveGame();
     }
 
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
