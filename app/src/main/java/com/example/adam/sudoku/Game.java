@@ -4,9 +4,9 @@ package com.example.adam.sudoku;
  * Created by Adam on 19/02/2018.
  */
 
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.content.res.ColorStateList;
 import android.graphics.Color;
 import android.os.Build;
 import android.preference.PreferenceManager;
@@ -14,11 +14,9 @@ import android.support.annotation.RequiresApi;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
-import android.widget.LinearLayout;
 import android.widget.TextView;
-
-import java.util.Arrays;
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 
 public class Game extends AppCompatActivity {
     SudokuBoard sudokuBoard;
@@ -35,6 +33,24 @@ public class Game extends AppCompatActivity {
         sudokuBoard.makeHoles();
         sudokuBoard.printGame();
         sudokuBoard.calculateSmall();
+
+        this.loadGameView(view);
+    }
+
+    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
+    public void resumeGame(View view) {
+        SudokuBoard savedSudokuBoard = this.loadGame();
+
+        if(savedSudokuBoard != null) {
+            sudokuBoard = savedSudokuBoard;
+            this.loadGameView(view);
+        } else {
+            this.startGame(view);
+        }
+    }
+
+    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
+    public void loadGameView(View view) {
 
         setContentView(R.layout.smalltest);
 
@@ -131,12 +147,13 @@ public class Game extends AppCompatActivity {
             sudokuBoard.gameBoard[Integer.parseInt(currCell.substring(0,1))][Integer.parseInt(currCell.substring(2,3))].setNumber(Integer.parseInt(num.substring(num.length() - 1)));
             refreshCells(Integer.parseInt(currCell.substring(0,1)),Integer.parseInt(currCell.substring(2,3)));
             currCell = "";
-            //currView.setBackgroundTintList(null); todo for old game screen
             currView.setBackground(null);
             currView = null;
 
             sudokuBoard.calculateSmall();
             refreshSmall();
+
+            saveGame();
 
             if(sudokuBoard.checkSolution() == true)
             {
@@ -177,6 +194,28 @@ public class Game extends AppCompatActivity {
     public void redo(View view)
     {
         System.out.println("REDO CLICKED ___________________");
+    }
+
+    public SudokuBoard loadGame() {
+        SharedPreferences sharedPref = getSharedPreferences( "appData", Context.MODE_PRIVATE );
+
+        if(sharedPref.contains("gameState")) {
+            String json = sharedPref.getString("gameState", null);
+            Gson gson = new GsonBuilder().registerTypeAdapter(SudokuBoard.class, new InterfaceAdapter<SudokuBoard>()).create();
+
+            return gson.fromJson(json, SudokuBoard.class);
+        }
+
+        return null;
+    }
+
+    public void saveGame() {
+        Gson gson = new GsonBuilder().registerTypeAdapter(SudokuBoard.class, new InterfaceAdapter<SudokuBoard>()).create();
+        String json = gson.toJson(this.sudokuBoard, SudokuBoard.class);
+
+        SharedPreferences.Editor prefEditor = getSharedPreferences( "appData", Context.MODE_PRIVATE ).edit();
+        prefEditor.putString( "gameState", json );
+        prefEditor.commit();
     }
 
     @Override
