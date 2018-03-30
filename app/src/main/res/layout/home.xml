@@ -20,7 +20,6 @@
             android:layout_marginRight="50dp"
             android:background="@android:color/holo_blue_bright"
             android:onClick="startGame"
-
             android:text="Start" />
 
         <Button
@@ -31,6 +30,7 @@
             android:layout_marginRight="50dp"
             android:layout_marginTop="25dp"
             android:background="@android:color/holo_red_light"
+            android:onClick="resumeGame"
             android:text="Resume" />
 
         <Button
